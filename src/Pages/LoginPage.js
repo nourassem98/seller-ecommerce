@@ -73,7 +73,7 @@ export default class LoginPage extends Component {
         }
 
         return (
-            <div>
+            <>
                 <div style={{ backgroundColor: "rgb(246, 241, 241)" }} >
                     <Row>
                         <Col md={1}></Col>
@@ -81,71 +81,71 @@ export default class LoginPage extends Component {
                             <Container >
                                 <h3 style={{ marginTop: 20 }}>Login</h3>
                                 <div style={{ backgroundColor: "white", marginTop: "20px" }}>
-                                    <Container style={{ paddingTop: "5%", marginBottom: "3%", marginLeft: "30%" }}>
-                                        <Row>
-                                            <Col>
-                                                <Row>
-                                                    <h6 style={{ fontSize: 15 }}>Enter your credenntials to access your account</h6>
-                                                    {/* <Button disabled style={{ textDecoration: "line-through ", marginTop: "1%", width: "36%", backgroundColor: "transparent", boxShadow: "black", borderColor: "black", color: "black" }}><FcGoogle style={{ fontSize: 25 }} />  Log In with Google</Button> */}
-                                                </Row>
+                                    <Container style={{ paddingTop: "5%", marginBottom: "3%" }}>
+                                        <div style={{ marginLeft: "30%" }}>
+                                            <Row>
+                                                <Col>
+                                                    <Row>
+                                                        <h6 style={{ fontSize: 15 }}>Enter your credenntials to access your account</h6>
+                                                        {/* <Button disabled style={{ textDecoration: "line-through ", marginTop: "1%", width: "36%", backgroundColor: "transparent", boxShadow: "black", borderColor: "black", color: "black" }}><FcGoogle style={{ fontSize: 25 }} />  Log In with Google</Button> */}
+                                                    </Row>
+                                                </Col>
+                                            </Row>
+
+                                            <Form id="fr" style={{ marginTop: "2%" }} onSubmit={this.asynchandleSubmit}>
+
+                                                <Form.Group className="mb-3" >
+                                                    <Form.Label>Email address</Form.Label>
+                                                    <Form.Control type="email" placeholder="Enter email" id="emailInput" style={{ width: "50%" }} />
+                                                    <Form.Text className="text-muted">
+                                                    </Form.Text>
+                                                </Form.Group>
+
+                                                <Form.Group className="mb-3" >
+                                                    <Form.Label >Password</Form.Label>
+                                                    <Form.Control type="password" placeholder="Password" id="passwordInput" style={{ width: "50%" }} />
+                                                </Form.Group>
+                                                {this.state.popup ?
+                                                    // <Alert variant="danger" style={{ width: "36%", height: "10%" }}>
+                                                    //     <Alert.Heading>Please check your credentials </Alert.Heading>
+                                                    //     <hr />
+                                                    <p style={{ color: "red" }}>
+                                                        You have entered an incorrect username or password !
+                                                    </p>
+                                                    // </Alert>
+                                                    : ""}
+
+                                                {this.returnPop}
+                                                <Form.Group className="mb-3">
+                                                    <Form.Check type="checkbox" label="Remember my information" />
+                                                </Form.Group>
+                                                {this.state.loading ?
+                                                    <Button type="submit" disabled style={{ color: "black", marginBottom: 20, width: "36%", backgroundColor: "lightgray", borderColor: "lightgray" }}>
+                                                        Loading
+                                                    </Button>
+                                                    : <Button type="submit" style={{ color: "black", marginBottom: 20, width: "36%", backgroundColor: "lightgray", borderColor: "lightgray" }}>
+                                                        Login
+                                                    </Button>
+                                                }
+                                            </Form>
+
+                                            <Col md={12}>
+                                                <Col>
+                                                    <a> Not a member?</a> <Link style={{ color: "orange", textDecorationLine: "none" }} to="/RegisterationPage"> Register</Link>
+                                                </Col>
+                                                <Col>
+                                                    <Link style={{ color: "orange", textDecorationLine: "none" }} to="/ForgetPassword"> Forgot Password ?</Link>
+                                                </Col>
                                             </Col>
-                                        </Row>
-
-                                        <Form id="fr" style={{ marginTop: "2%" }} onSubmit={this.asynchandleSubmit}>
-
-                                            <Form.Group className="mb-3" >
-                                                <Form.Label>Email address</Form.Label>
-                                                <Form.Control type="email" placeholder="Enter email" id="emailInput" style={{ width: "36%" }} />
-                                                <Form.Text className="text-muted">
-                                                </Form.Text>
-                                            </Form.Group>
-
-                                            <Form.Group className="mb-3" >
-                                                <Form.Label >Password</Form.Label>
-                                                <Form.Control type="password" placeholder="Password" id="passwordInput" style={{ width: "36%" }} />
-                                            </Form.Group>
-                                            {this.state.popup ?
-                                                // <Alert variant="danger" style={{ width: "36%", height: "10%" }}>
-                                                //     <Alert.Heading>Please check your credentials </Alert.Heading>
-                                                //     <hr />
-                                                <p style={{ color: "red" }}>
-                                                    You have entered an incorrect username or password !
-                                                </p>
-                                                // </Alert>
-                                                : ""}
-
-                                            {this.returnPop}
-                                            <Form.Group className="mb-3">
-                                                <Form.Check type="checkbox" label="Remember my information" />
-                                            </Form.Group>
-                                            {this.state.loading ?
-                                                <Button type="submit" disabled style={{ color: "black", marginBottom: 20, width: "36%", backgroundColor: "lightgray", borderColor: "lightgray" }}>
-                                                    Loading
-                                                </Button>
-                                                : <Button type="submit" style={{ color: "black", marginBottom: 20, width: "36%", backgroundColor: "lightgray", borderColor: "lightgray" }}>
-                                                    Login
-                                                </Button>
-                                            }
-                                        </Form>
-
-                                        <Col md={12}>
-                                            <Col>
-                                                <a> Not a member?</a> <Link style={{ color: "orange", textDecorationLine: "none" }} to="/RegisterationPage"> Register</Link>
-                                            </Col>
-                                            <Col>
-                                                <Link style={{ color: "orange", textDecorationLine: "none" }} to="/ForgetPassword"> Forgot Password ?</Link>
-                                            </Col>
-                                        </Col>
+                                        </div>
                                     </Container>
 
                                 </div>
                             </Container>
                         </Col>
-                        <Col md={1}></Col>
-
                     </Row >
                 </div >
-            </div>
+            </>
         )
 
     }
