@@ -18,6 +18,17 @@
 
 }
 
+.logoutBtn {
+    background-color: #2b2c2d !important;
+    border-color: #2b2c2d !important;
+}
+
+.logoutBtn:hover {
+    background-color: #7d8b99 !important;
+    border-color: #69737c !important;
+    color: #021329 !important;
+}
+
 .tab-panes .tab-pane {
     display: none !important;
 }
