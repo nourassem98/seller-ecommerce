@@ -14,7 +14,7 @@ export default class PurchaseHistory extends Component {
     }
 
     componentDidMount() {
-        var idSeller = window.localStorage.getItem("username");
+        var idSeller = window.sessionStorage.getItem("username");
 
         axios.get('https://e-commerce-neon.herokuapp.com/show_all_orders_history/' + idSeller)
             .then(res => {

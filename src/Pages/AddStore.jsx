@@ -23,7 +23,7 @@ export default class AddStore extends Component {
             var number = document.getElementById('number').value;
             var director = document.getElementById('director').value;
             var address = document.getElementById('address').value;
-            const idSeller = localStorage.getItem("username");
+            const idSeller = sessionStorage.getItem("username");
 
             var formdata = new FormData();
             formdata.append('name', name);

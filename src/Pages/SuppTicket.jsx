@@ -11,7 +11,7 @@ export default class SuppTicket extends Component {
     asynchandleSubmit = async event => {
         var msgItem = document.getElementById("desc").value;
         var subItem = document.getElementById("subject").value;
-        var idSeller = localStorage.getItem("username");
+        var idSeller = sessionStorage.getItem("username");
 
         var Fdata = new FormData();
         Fdata.append('description', msgItem);

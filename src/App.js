@@ -8,7 +8,7 @@ function App() {
     <div>
 
       {
-        localStorage.getItem("success") && localStorage.getItem("permission") == 3 ?
+        sessionStorage.getItem("success") && sessionStorage.getItem("permission") == 3 ?
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<SellerHome />} />

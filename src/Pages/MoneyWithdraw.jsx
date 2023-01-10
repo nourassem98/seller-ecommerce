@@ -9,7 +9,7 @@ export default class MoneyWithdraw extends Component {
         var msgItem = document.getElementById("msg").value;
         var valItem = document.getElementById("amount").value;
 
-        const idSeller = window.localStorage.getItem("username");
+        const idSeller = window.sessionStorage.getItem("username");
 
         var Fdata = new FormData();
         Fdata.append('message', msgItem);

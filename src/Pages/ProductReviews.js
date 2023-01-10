@@ -8,7 +8,7 @@ export default class ProductReviews extends Component {
         reviews: [],
     }
     componentDidMount() {
-        var idSeller = window.localStorage.getItem("username");
+        var idSeller = window.sessionStorage.getItem("username");
         axios.get('https://e-commerce-neon.herokuapp.com/product_reviews/' + idSeller)
             .then(res => {
                 // console.log(res)

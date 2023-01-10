@@ -10,7 +10,7 @@ export default class ShippingCost extends Component {
     }
 
     componentDidMount() {
-        var idSeller = localStorage.getItem("username");
+        var idSeller = sessionStorage.getItem("username");
 
         axios.get('https://e-commerce-neon.herokuapp.com/show_seller_locations/' + idSeller)
             .then(res => {
@@ -29,7 +29,7 @@ export default class ShippingCost extends Component {
         var shipPrice = document.getElementById('shipPrice').value;
         var district = document.getElementById('district').value;
 
-        var idSeller = localStorage.getItem("username");
+        var idSeller = sessionStorage.getItem("username");
 
         var Fdata = new FormData();
         Fdata.append('name', district);

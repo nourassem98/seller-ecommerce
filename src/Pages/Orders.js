@@ -15,7 +15,7 @@ export default class Orders extends Component {
     }
 
     componentDidMount() {
-        var idSeller = window.localStorage.getItem("username");
+        var idSeller = window.sessionStorage.getItem("username");
         console.log(idSeller)
         axios.get('https://e-commerce-neon.herokuapp.com/show_all_orders/' + idSeller)
             .then(res => {

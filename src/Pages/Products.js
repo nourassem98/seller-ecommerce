@@ -20,7 +20,7 @@ export default class Products extends Component {
         availableNames: []
     }
     componentDidMount() {
-        var idSeller = window.localStorage.getItem("username");
+        var idSeller = window.sessionStorage.getItem("username");
 
         axios.get('https://e-commerce-neon.herokuapp.com/show_all_products/' + idSeller)
             .then(res => {

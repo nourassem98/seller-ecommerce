@@ -16,7 +16,7 @@ export default class ShopSettings extends Component {
     }
 
     componentDidMount() {
-        var idSeller = window.localStorage.getItem("username");
+        var idSeller = window.sessionStorage.getItem("username");
 
         axios.get('https://e-commerce-neon.herokuapp.com/show_shops/' + idSeller)
             .then(res => {
@@ -26,7 +26,7 @@ export default class ShopSettings extends Component {
     }
 
     asynchandleSubmit = async event => {
-        var idSeller = window.localStorage.getItem("username");
+        var idSeller = window.sessionStorage.getItem("username");
         var submitName = document.getElementById("nameChange").value;
         var submitAdd = document.getElementById("addChange").value;
         var phono = document.getElementById("phoneChange").value;

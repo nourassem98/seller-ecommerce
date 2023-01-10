@@ -21,7 +21,7 @@ export default class ManageProfile extends Component {
     }
 
     componentDidMount() {
-        const idSeller = window.localStorage.getItem("username");
+        const idSeller = window.sessionStorage.getItem("username");
         console.log(idSeller)
         axios.get('https://e-commerce-neon.herokuapp.com/show_seller/' + idSeller)
             .then(res => {
@@ -36,7 +36,7 @@ export default class ManageProfile extends Component {
 
     asynchandleSubmit = async event => {
 
-        const idSeller = window.localStorage.getItem("username");
+        const idSeller = window.sessionStorage.getItem("username");
         var sname = document.getElementById("nameNew").value;
         console.log(document.getElementById("nameNew").value + "a8a")
         var number = document.getElementById("numberX").value;

@@ -36,14 +36,14 @@ export default class LoginPage extends Component {
                 console.log(decode)
                 this.setState({ workerID: decode.permission })
                 console.log(this.state.workerID)
-                localStorage.setItem("success", decode.success);
+                sessionStorage.setItem("success", decode.success);
                 if (decode.success === true) {
-                    localStorage.setItem("username", decode.worker);
-                    localStorage.setItem("profileName", decode.name);
-                    localStorage.setItem("permission", decode.permission)
-                    localStorage.setItem("exp", decode.exp)
-                    localStorage.setItem("user_real_id", decode.real_id)
-                    localStorage.setItem("called", false)
+                    sessionStorage.setItem("username", decode.worker);
+                    sessionStorage.setItem("profileName", decode.name);
+                    sessionStorage.setItem("permission", decode.permission)
+                    sessionStorage.setItem("exp", decode.exp)
+                    sessionStorage.setItem("user_real_id", decode.real_id)
+                    sessionStorage.setItem("called", false)
                     this.setState({ redirect: true });
                 }
                 else {

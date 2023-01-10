@@ -39,7 +39,7 @@ export default class SellerHome extends Component {
 
     }
     componentDidMount() {
-        var idSeller = window.localStorage.getItem("username");
+        var idSeller = window.sessionStorage.getItem("username");
         console.log(idSeller)
         axios.get('https://e-commerce-neon.herokuapp.com/seller_dash/' + idSeller)
             .then(res => {
@@ -51,11 +51,11 @@ export default class SellerHome extends Component {
     }
 
     logOut() {
-        localStorage.removeItem(window.localStorage.getItem("username"));
-        localStorage.clear();
-        window.localStorage.setItem("success", false)
+        sessionStorage.removeItem(window.sessionStorage.getItem("username"));
+        sessionStorage.clear();
+        window.sessionStorage.setItem("success", false)
         window.location.replace("/")
-        window.localStorage.clear()
+        window.sessionStorage.clear()
     }
 
     render() {
@@ -67,10 +67,10 @@ export default class SellerHome extends Component {
         // const navigate = useNavigate();
         window.addEventListener('popstate', function (event) {
             // console.log(window.history.length)
-            // localStorage.removeItem(window.localStorage.getItem("username"));
-            // localStorage.clear();
-            // // localStorage.clear();
-            // window.localStorage.setItem("success", false)
+            // sessionStorage.removeItem(window.sessionStorage.getItem("username"));
+            // sessionStorage.clear();
+            // // sessionStorage.clear();
+            // window.sessionStorage.setItem("success", false)
             // this.window.history.go("/")
             // window.history.back()
 

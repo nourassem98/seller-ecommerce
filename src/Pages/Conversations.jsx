@@ -18,7 +18,7 @@ export default class Conversations extends Component {
     asynchandleSubmit = async event => {
         await this.state.currIDInput
         var chatItem = document.getElementById(this.state.currIDInput).value;
-        var idSeller = window.localStorage.getItem("username");
+        var idSeller = window.sessionStorage.getItem("username");
 
         // var id = "2"
         var real_id_ticket = "9006921479034383"
@@ -42,7 +42,7 @@ export default class Conversations extends Component {
         window.location.reload()
     }
     componentDidMount() {
-        var idSeller = window.localStorage.getItem("username");
+        var idSeller = window.sessionStorage.getItem("username");
 
         axios.get('https://e-commerce-neon.herokuapp.com/show_tickets_seller/' + idSeller)
             .then(res => {
