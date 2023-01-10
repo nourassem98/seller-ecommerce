@@ -1,0 +1,115 @@
+.left-menu {
+
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    border: 3px solid transparent;
+}
+
+.color-black {
+    color: black !important;
+    padding-left: 5px;
+}
+
+.left-menu-icon {
+    bottom: 2px;
+    position: relative;
+
+}
+
+.tab-panes .tab-pane {
+    display: none !important;
+}
+
+.tab-panes .active {
+    display: block !important;
+}
+
+.panel {
+    display: none !important;
+    ;
+}
+
+.actived {
+    display: block !important;
+    ;
+}
+
+.active {
+    color: black !important;
+    ;
+    background-color: lightgray !important;
+    ;
+    border-left: 3px solid black !important;
+    ;
+}
+
+
+.left-menu:hover {
+    color: black;
+    background-color: lightgray;
+    border-left: 3px solid black;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+/* input[type=number] {
+    -moz-appearance: textfield;
+} */
+
+.btn-upload:hover,
+.btn-upload:active,
+.btn-upload:focus {
+    color: #101010 !important;
+    background-color: #dddddd !important;
+    border-color: #425e83 !important;
+    transition: 1s ease-out 50ms;
+}
+
+.inputGroup:hover {
+    background-color: #ecebe9 !important;
+    border-color: #eb770b !important;
+}
+
+
+
+
+.submitBtn:hover {
+    background-color: #8594a7 !important;
+    border-color: #8594a7 !important;
+    transition: 700ms ease-out;
+    color: #101010;
+}
+
+.message__outer {
+    display: flex;
+}
+
+.message__inner {
+    flex: 1;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.message__actions {
+    width: 67px;
+    padding-right: 5px;
+}
+
+.message__spacer {
+    flex: 1;
+}
+
+.message__status {
+    width: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}

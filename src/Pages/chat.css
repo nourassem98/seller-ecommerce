@@ -1,0 +1,48 @@
+.override {
+    color: black !important;
+    font-weight: bold;
+}
+
+p {
+    width: auto;
+
+}
+
+p.a {
+    word-break: break-all !important;
+    display: block !important;
+    line-break: strict !important;
+    color: black !important;
+    font-weight: 500;
+
+
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #bdbbba;
+    color: #fff;
+    box-shadow: none;
+}
+
+.accordion-button {
+    background-color: #cdcbc9;
+    color: black;
+    box-shadow: none;
+
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.inputGroup:hover {
+    background-color: #eae9e9 !important;
+    border-color: #ececec !important;
+}
